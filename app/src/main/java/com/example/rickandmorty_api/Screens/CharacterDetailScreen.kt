@@ -33,7 +33,7 @@ fun CharacterDetailScreen(characterId: Int) {
             .fillMaxSize()
 
             .background(Color(0xFF1e2838)),
-        contentAlignment = Alignment.Center // Centramos todo el contenido vertical y horizontalmente
+        contentAlignment = Alignment.Center
     ) {
         when (val result = characterDetail) {
             is ApiResult.Loading -> {

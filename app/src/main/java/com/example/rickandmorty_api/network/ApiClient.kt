@@ -2,6 +2,7 @@ package com.example.rickandmorty_api.network
 
 
 
+import com.example.rickandmorty_api.models.Character
 import com.example.rickandmorty_api.models.CharacterList
 import com.example.rickandmorty_api.models.EpisodeResponse
 import com.example.rickandmorty_api.models.LocationList
