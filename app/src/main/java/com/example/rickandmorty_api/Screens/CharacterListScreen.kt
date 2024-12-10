@@ -51,8 +51,9 @@ fun CharacterListScreen(navController: NavController) {
                 onValueChange = { searchQuery = it },
                 modifier = Modifier
                     .weight(1f)
-                    .border(1.dp, Color(0xFF625b71), RoundedCornerShape(8.dp)),
-                label = { Text("Search Character",
+                    .padding(top = 32.dp)
+                    .border(1.dp, Color(0xFFA6CCCC), RoundedCornerShape(8.dp)),
+                label = { Text("Buscar Personaje",
                     color = Color.White,
                     fontWeight = FontWeight.Bold
                 ) },
@@ -68,7 +69,8 @@ fun CharacterListScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.width(8.dp))
             Button(
-                modifier = Modifier,
+                modifier = Modifier
+                    .padding(top = 32.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFA1140A)),
                 onClick = {
                     coroutineScope.launch {
@@ -76,7 +78,7 @@ fun CharacterListScreen(navController: NavController) {
                     }
                 }
             ) {
-                Text("Search")
+                Text("Buscar")
             }
         }
 

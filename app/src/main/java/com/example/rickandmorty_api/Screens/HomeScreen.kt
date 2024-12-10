@@ -66,7 +66,7 @@ fun HomeOptionCard(imageUrl: String, title: String, onClick: () -> Unit) {
             .fillMaxWidth()
             .padding(8.dp)
             .clickable { onClick() },
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF38761D)),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF60A85F)),
         elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
     ) {
         Column(

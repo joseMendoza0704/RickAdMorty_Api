@@ -18,6 +18,8 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.*
@@ -26,6 +28,10 @@ import com.example.rickandmorty_api.Screens.CharacterListScreen
 import com.example.rickandmorty_api.Screens.EpisodeListScreen
 import com.example.rickandmorty_api.Screens.HomeScreen
 import com.example.rickandmorty_api.Screens.LocationListScreen
+
+val RickAndMortyFont = FontFamily(
+    Font(R.font.rickandmortyfont, FontWeight.Normal)
+)
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,16 +62,17 @@ fun RickAndMortyApp() {
 
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(top = 8.dp)
+                            .padding(top = 18.dp)
                             .background(Color(0xFF1e2838)),
 
-                        contentAlignment = Alignment.Center
+                        contentAlignment = Alignment.CenterStart
                     ) {
                         Text(
+                            modifier = Modifier
+                                .padding(start = 60.dp),
                             text = "Rick and Morty",
-                            style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
-                            color = Color.White
-
+                            style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold, fontFamily = RickAndMortyFont),
+                            color = Color(0xFFA6CCCC),
                         )
                     }
                 },
@@ -73,6 +80,8 @@ fun RickAndMortyApp() {
                     if (navController.currentBackStackEntry?.destination?.route != "home") {
                         IconButton(onClick = { navController.navigateUp() }) {
                             Icon(
+                                modifier = Modifier
+                                    .padding(top=25.dp),
                                 imageVector = Icons.Filled.ArrowBack,
                                 contentDescription = "Back",
                                 tint = Color.White
