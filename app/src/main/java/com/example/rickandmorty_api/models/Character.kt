@@ -10,5 +10,5 @@ data class Character(
 )
 
 data class CharacterList(
-    val results: List<Character> // Esta es la lista de personajes que retorna la API
+    val results: List<Character>
 )
