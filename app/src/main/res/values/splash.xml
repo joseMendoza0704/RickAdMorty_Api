@@ -3,7 +3,7 @@
     <style name="Theme.AnimatedSplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/bluerick</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/avd_anim</item>
-        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/Theme.RickAndMorty_API</item>
     </style>
 </resources>

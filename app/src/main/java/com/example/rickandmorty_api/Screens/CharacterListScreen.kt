@@ -42,10 +42,13 @@ fun CharacterListScreen(navController: NavController) {
 
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF1e2838)),
+            .background(Color(0xFF1e2838))
+            .padding(horizontal = 16.dp),
     ) {
 
-        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()
+            .padding(top = 32.dp)
+        ) {
             TextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
@@ -71,7 +74,7 @@ fun CharacterListScreen(navController: NavController) {
             Button(
                 modifier = Modifier
                     .padding(top = 32.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFA1140A)),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFB6467)),
                 onClick = {
                     coroutineScope.launch {
                         viewModel.searchCharacterByName(searchQuery)
@@ -103,7 +106,7 @@ fun CharacterListScreen(navController: NavController) {
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(20.dp),
-                            colors = CardDefaults.cardColors(containerColor =  Color(0xFF38761D)),
+                            colors = CardDefaults.cardColors(containerColor =  Color(0xFF60a85f)),
                             elevation = CardDefaults.cardElevation(defaultElevation = 15.dp),
                             onClick = {
 
