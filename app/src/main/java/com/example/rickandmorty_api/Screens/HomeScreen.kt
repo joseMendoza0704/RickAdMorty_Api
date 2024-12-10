@@ -11,9 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-
 import androidx.compose.ui.unit.dp
-
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 
@@ -32,7 +30,7 @@ fun HomeScreen(navController: NavController) {
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Cards para opciones
+
             item {
                 HomeOptionCard(
                     imageUrl = "https://sm.ign.com/ign_latam/image/t/the-top-10/the-top-100-best-tv-shows-of-all-time_em2k.jpg",
@@ -75,17 +73,17 @@ fun HomeOptionCard(imageUrl: String, title: String, onClick: () -> Unit) {
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Imagen en formato 4:3
+
             Image(
                 painter = rememberAsyncImagePainter(imageUrl),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .aspectRatio(4 / 3f), // Relación de aspecto 4:3
+                    .aspectRatio(4 / 3f),
                 contentScale = ContentScale.Crop
             )
 
-            // Título centrado debajo de la imagen
+
             Text(
                 text = title,
                 style = MaterialTheme.typography.bodyLarge,
